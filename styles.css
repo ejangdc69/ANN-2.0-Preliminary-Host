@@ -15,3 +15,15 @@ button:disabled,select:disabled{cursor:not-allowed;opacity:.55}
 .equation-inspector{margin-top:15px;overflow-wrap:anywhere}.formula-step{padding:13px 15px;background:#071c2f;border:1px solid #2b5068;border-radius:8px;margin-bottom:12px;font-size:13px;line-height:1.9;color:#b6dcee;font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.strong-step{border-color:#2ba6bf;color:#7ce5ed}
 @media(max-width:700px){.explore-toolbar{flex-wrap:wrap}.bar-label{font-size:10px}}
 @media(prefers-reduced-motion:reduce){.bar-fill{animation:none}}
+
+/* Activity-code reference: desktop sidebar, mirrors the model's selected category */
+.activity-reference{border:1px solid #23465c;background:linear-gradient(145deg,#0d263a,#0a1c2c);border-radius:12px;padding:15px 11px;margin-top:-13px}
+.activity-reference-heading{font-size:10px;font-weight:800;letter-spacing:.105em;color:#74cce7;padding:0 4px;margin-bottom:12px}
+.activity-reference-list{display:flex;flex-direction:column;gap:5px}
+.activity-reference-item{display:flex;align-items:center;gap:9px;padding:9px 8px;border:1px solid transparent;border-radius:7px;color:#a5bfd1;font-size:11px;line-height:1.35;transition:background .2s,border-color .2s,color .2s}
+.activity-number{display:grid;place-items:center;min-width:27px;height:27px;border-radius:6px;background:#142e44;color:#7fb2cc;font-size:10px;font-weight:800;letter-spacing:.02em}
+.activity-reference-item.active{background:#123c53;border-color:#267895;color:#effbff;box-shadow:inset 2px 0 #25caee}
+.activity-reference-item.active .activity-number{background:#1f9eca;color:#061626}
+.activity-reference-foot{color:#6f93a9;font-size:10px;line-height:1.5;margin:11px 4px 0}
+@media(max-width:1050px){.activity-reference{display:none}}
+@media(prefers-reduced-motion:reduce){.activity-reference-item{transition:none}}
