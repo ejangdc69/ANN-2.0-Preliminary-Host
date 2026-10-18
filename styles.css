@@ -27,3 +27,84 @@ button:disabled,select:disabled{cursor:not-allowed;opacity:.55}
 .activity-reference-foot{color:#6f93a9;font-size:10px;line-height:1.5;margin:11px 4px 0}
 @media(max-width:1050px){.activity-reference{display:none}}
 @media(prefers-reduced-motion:reduce){.activity-reference-item{transition:none}}
+
+
+/* ===== V4: unified accessible layout / typography / component system ===== */
+:root{--surface:#0d2336;--border:#284962;--muted:#a5bfd1;--accent:#42cdec;--space:28px}
+body{font-size:16px;line-height:1.55}
+.shell{grid-template-columns:320px minmax(0,1fr)}
+.sidebar{padding:30px 19px;gap:27px;min-width:0}
+.brand{padding:0 8px}.brandmark{width:44px;height:44px}
+.brand strong{font-size:15px}.brand small{font-size:12px}
+.side-caption{font-size:12px;margin-bottom:-15px;padding-left:12px}
+.navitem{font-size:15px;padding:14px 13px;line-height:1.35;min-height:49px}
+.side-bottom{font-size:11px;line-height:1.65;letter-spacing:.03em}
+.side-bottom p{font-size:12px}
+.topbar{min-height:72px;height:auto;padding:12px clamp(24px,3vw,48px);gap:12px}
+.breadcrumb{font-size:12px}.topright{font-size:13px}.mode-pill{font-size:11px}
+.content{max-width:1540px;padding:48px clamp(24px,3vw,48px) 90px}
+.eyebrow,.overline{font-size:12px;line-height:1.6;letter-spacing:.12em}
+h1{font-size:clamp(37px,3.6vw,54px);line-height:1.13}
+.lead{font-size:16px;line-height:1.7;max-width:800px;margin:19px 0 35px}
+.metrics{gap:20px;margin-bottom:28px}
+.metric{padding:27px 26px;min-height:132px}
+.metric>span,.resultlabel{font-size:12px;letter-spacing:.065em}
+.metric strong{font-size:clamp(25px,2.4vw,33px);margin:10px 0 7px;line-height:1.2}
+.metric sub{font-size:15px}.metric small{font-size:13px;line-height:1.5}
+.two-col{gap:24px;align-items:stretch}.panel{padding:clamp(22px,2.5vw,34px);border-radius:16px}
+.panel h2{font-size:clamp(21px,1.8vw,25px);line-height:1.35;margin:8px 0 0}
+.helper{font-size:15px;line-height:1.75;margin:17px 0 24px;color:#b0c6d9}
+.panel label{font-size:12px;margin:18px 0 9px}
+.panel select{font-size:15px;min-height:50px;padding:13px 38px 13px 15px;border-radius:9px}
+.primary{font-size:15px;min-height:52px;padding:14px 18px;align-items:center;gap:14px}
+.micro,.result-main p,.result-foot strong,.caution,.below-note{font-size:13px;line-height:1.75}
+.live{font-size:11px;white-space:nowrap}.resultlabel{line-height:1.6}
+.result-main{min-height:310px;padding:38px 8px}
+.resultnumber strong{font-size:clamp(60px,6vw,88px)}
+.resultnumber span{font-size:19px}
+.result-foot span{font-size:11px}.result-foot strong{font-size:13px}
+.caution{padding:16px 17px}
+.below-note{padding:24px 0}
+/* Allow panels following grid rows to read as distinct sections */
+.page > .panel{margin-top:28px}
+.page > .two-col + .panel{margin-top:28px}
+.page > .panel + .panel{margin-top:28px}
+.page > .panel + .two-col{margin-top:28px}
+.network-viz{height:410px;margin:14px 0 12px}
+.legend{font-size:13px;gap:24px;line-height:1.6}
+.explore-toolbar{margin-top:27px;gap:15px}
+.ghostbutton,.artifact-link{display:inline-flex;align-items:center;justify-content:center;gap:14px;padding:12px 18px;border-radius:9px;border:1px solid #36718e;background:#123951;color:#b4edff;font-weight:700;font-size:14px;min-height:44px;text-decoration:none;transition:background .15s,border-color .15s}
+.ghostbutton:hover,.artifact-link:hover{background:#19516d;border-color:#54bbe0}
+.equation{font-size:clamp(18px,1.8vw,23px);line-height:1.7;padding:27px 5px}
+.activation-info,.activation-data{font-size:14px;line-height:1.8}
+.forward-summary{font-size:14px;line-height:1.8;padding:14px 16px}
+.tablewrap{margin-top:10px}table{font-size:14px;margin-top:12px}th{font-size:12px}th,td{padding:15px 14px;line-height:1.6}
+.chart-panel{margin-bottom:0}.bar-chart{padding:24px 0 7px;min-height:320px}
+.bar-row{margin:15px 0 28px}.bar-label{font-size:15px;line-height:1.6;margin-bottom:12px}.bar-track{height:20px;border-radius:8px}
+.equation-inspector{margin-top:24px}.formula-step{font-size:14px;line-height:1.9;padding:18px;overflow-x:auto}
+.load-banner{font-size:14px;padding:14px 18px;margin-bottom:27px}
+/* Activity reference matches the card-centric concept and works as a picker */
+.activity-reference{padding:16px 12px 14px;margin-top:2px;border-radius:16px;border:1px solid #28516b;background:linear-gradient(160deg,#102e46,#0a2034);box-shadow:0 10px 28px #00000018}
+.activity-reference-heading{display:flex;align-items:center;gap:11px;padding:3px 5px 16px;margin:0;color:#ecf9ff;letter-spacing:0}
+.activity-reference-heading strong{display:block;font-size:15px;line-height:1.35}
+.activity-reference-heading small{display:block;font-size:12px;font-weight:400;line-height:1.5;color:#91b3cc;margin-top:4px}
+.reference-icon{display:grid;place-items:center;background:#173f59;border:1px solid #347394;border-radius:10px;width:36px;height:36px;font-size:20px;color:#64dbf8;flex:none}
+.activity-reference-list{gap:8px}
+.activity-reference-item{width:100%;text-align:left;min-height:52px;gap:11px;padding:9px 10px;border:1px solid #2b4c63;border-radius:10px;background:#10293e;color:#d7e7f1;font-size:14px;line-height:1.4;cursor:pointer}
+.activity-reference-item:hover{background:#173b54;border-color:#3b829f}
+.activity-number{min-width:34px;height:33px;font-size:12px;border-radius:8px;color:#a3cae1;background:#1d415a}
+.activity-name{flex:1;min-width:0}
+.activity-check{font-size:16px;color:#86eeed;opacity:0}
+.activity-reference-item.active{background:#15506a;border-color:#37c0e7;box-shadow:inset 3px 0 #35d0f1;color:#fff}
+.activity-reference-item.active .activity-check{opacity:1}
+.activity-reference-item.active .activity-number{background:#2ac4ee;color:#061c2a}
+.activity-reference-foot{font-size:12px;line-height:1.55;margin:14px 6px 2px;color:#8badc3}
+.empty-state{border:1px dashed #34637a;border-radius:13px;background:#0a2135;min-height:210px;padding:27px;display:flex;flex-direction:column;gap:12px;align-items:center;justify-content:center;text-align:center}
+.empty-icon{width:46px;height:46px;display:grid;place-items:center;background:#123d57;border-radius:13px;font-size:25px;color:#62d6f3}
+.empty-state strong{font-size:18px}.empty-state p{font-size:14px;line-height:1.7;color:#a7c4d8;max-width:440px;margin:0 0 5px}
+:where(button,select,a):focus-visible{outline:3px solid #79e1ff;outline-offset:3px}
+@media(max-width:1250px){.shell{grid-template-columns:280px minmax(0,1fr)}.sidebar{padding:24px 13px}.activity-reference-item{font-size:13px}.metric{padding:21px}.two-col{gap:18px}}
+@media(max-width:1050px){.shell{grid-template-columns:250px minmax(0,1fr)}.sidebar{padding:22px 12px;gap:23px}.brand{justify-content:flex-start;padding:0 4px}.brand>div:last-child{display:block}.side-caption{display:block;font-size:11px}.navitem{font-size:13px;justify-content:flex-start;padding:12px 10px}.navitem span{font-size:18px}.activity-reference{display:block}.side-bottom{font-size:10px}.side-bottom p{display:block}.content{padding:35px 24px 65px}.topbar{padding:13px 24px}.two-col{grid-template-columns:1fr}.metrics{gap:11px}}
+@media(max-width:700px){.shell{display:block}.sidebar{height:auto;min-height:66px;padding:10px 12px;display:flex;flex-direction:column;gap:0;position:sticky;top:0;z-index:8;background:#091828}.sidebar .brand,.sidebar .side-caption,.sidebar .activity-reference,.sidebar .side-bottom{display:none}nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;width:100%}.navitem{font-size:11px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:2px;line-height:1.25;text-align:center;padding:6px 3px;min-height:55px}.navitem span{font-size:20px}.content{padding:31px 16px 62px}.topbar{padding:12px 16px;min-height:55px}.breadcrumb{font-size:10px}.topright{font-size:11px;gap:7px}.metrics{grid-template-columns:1fr}.metric{min-height:0;padding:19px}.metric strong{font-size:27px}.panel{padding:20px}.lead{font-size:15px}.network-viz{height:325px}.bar-chart{min-height:0}.bar-label{font-size:13px}.bar-track{height:17px}.explore-toolbar{flex-wrap:wrap}.result-main{min-height:235px}footer{padding:20px 16px}}
+@media(max-width:380px){.navitem{font-size:10px}.breadcrumb{letter-spacing:0}.topright>span:last-child{display:none}}
+@media(prefers-reduced-motion:reduce){.page.active{animation:none}.ghostbutton,.artifact-link{transition:none}}
