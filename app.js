@@ -1,4 +1,4 @@
-import { predictFromModel } from './assets/predict_exact.js';
+import { predictFromModel } from './Assets/predict_exact.js';
 const $=s=>document.querySelector(s);
 let model,last;
 const banner=$('#load-banner'), loadMessage=$('#load-message');
