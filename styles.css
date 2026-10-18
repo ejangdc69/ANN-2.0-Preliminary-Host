@@ -6,3 +6,12 @@
 .load-banner[data-state="ready"]{background:#0c3030;border-color:#215c56;color:#8ef3d7}.load-banner[data-state="ready"] .spinner{animation:none;border:0;width:15px;height:15px;background:#3bd5ad;clip-path:polygon(16% 55%,36% 75%,83% 20%,95% 31%,38% 93%,5% 65%)}
 .load-banner[data-state="error"]{background:#39202a;border-color:#a55163;color:#ffd3d9}.load-banner[data-state="error"] .spinner{animation:none;border:0;width:16px;height:16px;background:#f08ca2;clip-path:polygon(43% 0,57% 0,57% 68%,43% 68%,43% 0,43% 82%,57% 82%,57% 100%,43% 100%)}
 button:disabled,select:disabled{cursor:not-allowed;opacity:.55}
+
+/* V3 research panels */
+.explore-toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:24px}
+.ghostbutton{padding:9px 13px;border-radius:8px;border:1px solid #33566e;background:#113148;color:#9beaff;font-weight:700;font-size:12px}.ghostbutton:hover{background:#184563}
+.activation-info{font-size:12px;color:#8aacc4;line-height:1.7;margin-top:16px}.forward-summary{padding:10px 13px;background:#0a3043;border-radius:8px;color:#b1e8f8}.positive{color:#5ee3b5}.negative{color:#feb1a8}
+.chart-panel{margin-bottom:20px}.bar-chart{padding:14px 0 3px}.bar-row{margin:14px 0 22px}.bar-label{display:flex;justify-content:space-between;gap:10px;font-size:12px;color:#adc7dc;margin-bottom:9px}.bar-label strong{font-variant-numeric:tabular-nums}.bar-track{height:16px;border-radius:6px;background:#07192b;overflow:hidden}.bar-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,#286789,#3d9fd2);animation:bar-in .6s ease-out}.bar-fill.selected{background:linear-gradient(90deg,#228dc9,#26d1ed)}@keyframes bar-in{from{width:0}}
+.equation-inspector{margin-top:15px;overflow-wrap:anywhere}.formula-step{padding:13px 15px;background:#071c2f;border:1px solid #2b5068;border-radius:8px;margin-bottom:12px;font-size:13px;line-height:1.9;color:#b6dcee;font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.strong-step{border-color:#2ba6bf;color:#7ce5ed}
+@media(max-width:700px){.explore-toolbar{flex-wrap:wrap}.bar-label{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.bar-fill{animation:none}}
