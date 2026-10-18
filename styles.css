@@ -127,3 +127,14 @@ h1{font-size:clamp(37px,3.6vw,54px);line-height:1.13}
 .signal-svg .edge.signal-active{stroke-dasharray:1;stroke-dashoffset:0;animation:signal-travel .68s ease-out both}
 @keyframes signal-travel{from{stroke-dashoffset:1;opacity:.12}to{stroke-dashoffset:0}}
 @media(prefers-reduced-motion:reduce){.signal-svg .edge.signal-active{animation:none}}
+
+/* Adviser review: explanatory components */
+.topology-guide,.definition-grid,.derivation-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:22px}
+.topology-guide>div,.definition-grid>div,.derivation-steps>div{border:1px solid #284c65;background:#0b2134;border-radius:12px;padding:18px 20px;line-height:1.6}
+.topology-guide strong,.definition-grid strong,.derivation-steps strong{color:#e7f7ff;font-size:16px}
+.topology-guide p,.definition-grid p,.derivation-steps p{color:#a3c6dc;font-size:15px;line-height:1.65;margin:8px 0 0}
+.topology-note{margin-top:20px}.derivation-steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+.step-count{display:inline-flex;margin-right:12px;color:#55cdec;font-size:13px;font-weight:800;letter-spacing:.07em}
+.equation-derivation{overflow-wrap:anywhere;margin-top:24px;font-size:clamp(17px,2vw,24px)}
+.explainer-panel .definition-grid{margin-bottom:22px}
+@media(max-width:850px){.topology-guide,.definition-grid,.derivation-steps{grid-template-columns:1fr}}
